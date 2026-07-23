@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Play, Tv, Zap, Shield, Check, ChevronDown, MonitorPlay, Smartphone, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Monitor, Smartphone, Laptop, Tv, Download } from 'lucide-react';
 
 export default function Installation() {
