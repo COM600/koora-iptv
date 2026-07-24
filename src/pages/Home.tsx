@@ -118,7 +118,7 @@ export default function Home() {
             <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 flex flex-col">
               <h3 className="text-2xl font-bold mb-2">1 Mois</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-extrabold">149 Dhs</span>
+                <span className="text-4xl font-extrabold">30 Dhs</span>
               </div>
               <p className="text-slate-400 mb-6 pb-6 border-b border-slate-700">Idéal pour tester notre service IPTV premium.</p>
               
@@ -140,7 +140,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold mb-2">12 Mois</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-extrabold">270 Dhs</span>
+                <span className="text-5xl font-extrabold">250 Dhs</span>
                 <span className="text-slate-400 line-through">699 Dhs</span>
               </div>
               <p className="text-slate-400 mb-6 pb-6 border-b border-slate-700">Le meilleur rapport qualité/prix. Économisez 50% !</p>
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="bg-slate-800 rounded-3xl p-8 border border-slate-700 flex flex-col">
               <h3 className="text-2xl font-bold mb-2">6 Mois</h3>
               <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-4xl font-extrabold">249 Dhs</span>
+                <span className="text-4xl font-extrabold">150 Dhs</span>
               </div>
               <p className="text-slate-400 mb-6 pb-6 border-b border-slate-700">Un excellent compromis pour profiter sur la durée.</p>
               
