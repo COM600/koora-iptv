@@ -15,50 +15,62 @@ const initialFormData: ContactFormData = {
   message: '',
 };
 
+const whatsappNumber = '212673709744';
+
 export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<{ type: 'idle' | 'success' | 'error'; message: string }>({
     type: 'idle',
     message: '',
   });
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitting(true);
-    setStatus({ type: 'idle', message: '' });
+    const trimmedData = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
+    };
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = (await response.json()) as { message?: string };
-
-      if (!response.ok) {
-        throw new Error(data.message || "L'envoi du message a échoué.");
-      }
-
-      setStatus({
-        type: 'success',
-        message: 'Votre message a bien été envoyé. Nous vous répondrons très bientôt.',
-      });
-      setFormData(initialFormData);
-    } catch (error) {
+    if (!trimmedData.name || !trimmedData.email || !trimmedData.subject || !trimmedData.message) {
       setStatus({
         type: 'error',
-        message:
-          error instanceof Error
-            ? error.message
-            : "Une erreur est survenue lors de l'envoi du message.",
+        message: 'Merci de remplir tous les champs avant de continuer sur WhatsApp.',
       });
-    } finally {
-      setIsSubmitting(false);
+      return;
     }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(trimmedData.email)) {
+      setStatus({
+        type: 'error',
+        message: 'Merci de saisir une adresse e-mail valide.',
+      });
+      return;
+    }
+
+    const whatsappMessage = [
+      'Bonjour Koora IPTV,',
+      '',
+      `Nom : ${trimmedData.name}`,
+      `Email : ${trimmedData.email}`,
+      `Sujet : ${trimmedData.subject}`,
+      '',
+      'Message :',
+      trimmedData.message,
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
+    setStatus({
+      type: 'success',
+      message: 'WhatsApp a ete ouvert avec votre message pre-rempli.',
+    });
+    setFormData(initialFormData);
   };
 
   return (
@@ -127,7 +139,10 @@ export default function Contact() {
           {/* Formulaire de contact */}
           <div className="lg:col-span-2">
             <div className="bg-slate-800/50 p-8 md:p-12 rounded-3xl border border-slate-700">
-              <h3 className="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+              <h3 className="text-2xl font-bold mb-3">Envoyez-nous un message</h3>
+              <p className="text-slate-400 mb-6">
+                Remplissez ce formulaire et nous ouvrirons WhatsApp avec votre message deja prepare.
+              </p>
               
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -212,10 +227,9 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full md:w-auto px-8 py-4 bg-slate-700 hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60 text-white rounded-xl font-bold transition"
+                  className="w-full md:w-auto px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-bold transition"
                 >
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                  Continuer sur WhatsApp
                 </button>
               </form>
             </div>
