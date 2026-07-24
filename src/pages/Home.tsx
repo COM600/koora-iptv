@@ -21,7 +21,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] -z-10"></div>
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8">
-              Le Meilleur Fournisseur <span className="text-primary">IPTV</span> au Maroc
+              Abonnement <span className="text-primary">IPTV Maroc Premium</span> : Nos Tarifs & Formules 2026
             </h1>
             <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               Profitez de plus de 15 000 chaînes, 50 000 VOD et séries en qualité 4K/FHD. Une stabilité garantie sans coupure, compatible avec tous vos appareils.
@@ -93,13 +93,6 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">VOD & Séries</h3>
               <p className="text-slate-400">Une bibliothèque massive de plus de 50 000 films et séries mise à jour quotidiennement.</p>
-            </div>
-            <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition duration-300">
-              <div className="bg-primary/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Paiement Sécurisé</h3>
-              <p className="text-slate-400">Transactions 100% sécurisées avec les meilleurs protocoles de chiffrement.</p>
             </div>
           </div>
         </div>
