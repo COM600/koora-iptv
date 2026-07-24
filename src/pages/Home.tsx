@@ -58,7 +58,7 @@ export default function Home() {
             <p className="text-slate-400 max-w-2xl mx-auto">Notre infrastructure de pointe vous garantit une expérience de visionnage exceptionnelle.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-primary/50 transition duration-300">
               <div className="bg-primary/20 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
                 <Zap className="h-7 w-7 text-primary" />
@@ -200,10 +200,14 @@ export default function Home() {
                 <Zap className="h-12 w-12 text-slate-500" />
               </div>
               <div className="p-6">
-                <div className="text-sm text-primary font-bold mb-2">Astuces</div>
-                <h3 className="text-xl font-bold mb-3 hover:text-primary transition cursor-pointer">Éviter les coupures pendant les matchs</h3>
-                <p className="text-slate-400 mb-4 line-clamp-2">Voici les meilleures pratiques et configurations pour garantir une fluidité parfaite lors des grands événements sportifs.</p>
-                <a href="#" className="text-white font-medium hover:text-primary transition flex items-center gap-2">Lire la suite</a>
+                <div className="text-sm text-primary font-bold mb-2">Dossier</div>
+                <h3 className="text-xl font-bold mb-3 hover:text-primary transition cursor-pointer">
+                  <Link to="/iptv-maroc">IPTV au Maroc : fonctionnement, debit necessaire et offres legales</Link>
+                </h3>
+                <p className="text-slate-400 mb-4 line-clamp-2">
+                  Comprenez comment fonctionne l&apos;IPTV au Maroc, quel debit il faut vraiment et comment distinguer une offre legale d&apos;un service non autorise.
+                </p>
+                <Link to="/iptv-maroc" className="text-white font-medium hover:text-primary transition flex items-center gap-2">Lire la suite</Link>
               </div>
             </div>
             {/* Blog Post 3 */}
@@ -212,10 +216,30 @@ export default function Home() {
                 <Shield className="h-12 w-12 text-slate-500" />
               </div>
               <div className="p-6">
-                <div className="text-sm text-primary font-bold mb-2">Actualités</div>
-                <h3 className="text-xl font-bold mb-3 hover:text-primary transition cursor-pointer">Les nouveautés VOD du mois</h3>
-                <p className="text-slate-400 mb-4 line-clamp-2">Parcourez la liste des derniers films et séries ajoutés à notre catalogue ce mois-ci. Plus de 500 nouveaux contenus !</p>
-                <a href="#" className="text-white font-medium hover:text-primary transition flex items-center gap-2">Lire la suite</a>
+                <div className="text-sm text-primary font-bold mb-2">Technique</div>
+                <h3 className="text-xl font-bold mb-3 hover:text-primary transition cursor-pointer">
+                  <Link to="/lecteur-iptv">Lecteur IPTV : role, limites techniques et choix de l&apos;application</Link>
+                </h3>
+                <p className="text-slate-400 mb-4 line-clamp-2">
+                  Comprenez ce que fait reellement un lecteur IPTV, pourquoi certains flux refuses de se lancer et comment choisir selon votre materiel.
+                </p>
+                <Link to="/lecteur-iptv" className="text-white font-medium hover:text-primary transition flex items-center gap-2">Lire la suite</Link>
+              </div>
+            </div>
+            {/* Blog Post 4 */}
+            <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-primary/50 transition duration-300">
+              <div className="h-48 bg-slate-700 flex items-center justify-center">
+                <MonitorPlay className="h-12 w-12 text-slate-500" />
+              </div>
+              <div className="p-6">
+                <div className="text-sm text-primary font-bold mb-2">Materiel</div>
+                <h3 className="text-xl font-bold mb-3 hover:text-primary transition cursor-pointer">
+                  <Link to="/box-tv-android">Box TV : quel boitier choisir et les pieges a eviter</Link>
+                </h3>
+                <p className="text-slate-400 mb-4 line-clamp-2">
+                  Certification, HDCP, reseau, audio : les vrais criteres pour choisir une box TV sans mauvaise surprise.
+                </p>
+                <Link to="/box-tv-android" className="text-white font-medium hover:text-primary transition flex items-center gap-2">Lire la suite</Link>
               </div>
             </div>
           </div>

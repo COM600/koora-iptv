@@ -9,6 +9,9 @@ import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import IptvMaroc from './pages/IptvMaroc';
+import LecteurIptv from './pages/LecteurIptv';
+import BoxTvAndroid from './pages/BoxTvAndroid';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -42,6 +45,9 @@ function App() {
             <Route path="/refund-returns" element={<Refund />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about-us" element={<About />} />
+            <Route path="/iptv-maroc" element={<IptvMaroc />} />
+            <Route path="/lecteur-iptv" element={<LecteurIptv />} />
+            <Route path="/box-tv-android" element={<BoxTvAndroid />} />
           </Routes>
         </main>
         <Footer />
