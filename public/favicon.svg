@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Koora IPTV">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <rect x="12" y="16" width="40" height="26" rx="6" fill="none" stroke="url(#accent)" stroke-width="4" />
+  <path d="M24 48h16" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" />
+  <path d="M32 42v6" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" />
+  <path d="M24 24l16 10-16 10z" fill="url(#accent)" />
+</svg>
