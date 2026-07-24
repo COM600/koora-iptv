@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kooraiptv.com/sitemap_index.xml
