@@ -1,4 +1,4 @@
-import { Tv, Globe, Clock, ShieldCheck, Heart, Zap } from 'lucide-react';
+import { Tv, Globe, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function About() {

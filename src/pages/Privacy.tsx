@@ -1,4 +1,4 @@
-import { Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export default function Privacy() {
   return (
