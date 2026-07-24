@@ -7,6 +7,20 @@ export default function Header() {
   const location = useLocation();
   
   const isHome = location.pathname === '/';
+  const activeHash = isHome ? location.hash || '#accueil' : '';
+
+  const desktopLinkClass = (isActive: boolean) =>
+    isActive
+      ? 'text-primary font-medium hover:text-rose-400 transition'
+      : 'text-slate-300 hover:text-white transition';
+
+  const mobileLinkClass = (isActive: boolean) =>
+    isActive
+      ? 'block px-3 py-2 text-base font-medium text-primary bg-slate-700 rounded-md'
+      : 'block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md';
+
+  const isActivePath = (path: string) => location.pathname === path;
+  const isActiveSection = (hash: string) => isHome && activeHash === hash;
 
   return (
     <header className="fixed w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-800">
@@ -20,23 +34,23 @@ export default function Header() {
           </Link>
           
           <nav className="hidden md:flex space-x-8">
-            <Link to={isHome ? "#accueil" : "/"} className="text-slate-300 hover:text-white transition">Accueil</Link>
-            <Link to="/about-us" className="text-slate-300 hover:text-white transition">À Propos</Link>
+            <Link to="/#accueil" className={desktopLinkClass(isActiveSection('#accueil'))}>Accueil</Link>
+            <Link to="/about-us" className={desktopLinkClass(isActivePath('/about-us'))}>À Propos</Link>
             {isHome ? (
               <>
-                <a href="#caracteristiques" className="text-slate-300 hover:text-white transition">Caractéristiques</a>
-                <a href="#tarifs" className="text-slate-300 hover:text-white transition">Tarifs</a>
-                <a href="#faq" className="text-slate-300 hover:text-white transition">FAQ</a>
-                <a href="#blog" className="text-slate-300 hover:text-white transition">Blog</a>
+                <Link to="/#caracteristiques" className={desktopLinkClass(isActiveSection('#caracteristiques'))}>Caractéristiques</Link>
+                <Link to="/#tarifs" className={desktopLinkClass(isActiveSection('#tarifs'))}>Tarifs</Link>
+                <Link to="/#faq" className={desktopLinkClass(isActiveSection('#faq'))}>FAQ</Link>
+                <Link to="/#blog" className={desktopLinkClass(isActiveSection('#blog'))}>Blog</Link>
               </>
             ) : (
               <>
-                <Link to="/#caracteristiques" className="text-slate-300 hover:text-white transition">Caractéristiques</Link>
-                <Link to="/#tarifs" className="text-slate-300 hover:text-white transition">Tarifs</Link>
+                <Link to="/#caracteristiques" className={desktopLinkClass(false)}>Caractéristiques</Link>
+                <Link to="/#tarifs" className={desktopLinkClass(false)}>Tarifs</Link>
               </>
             )}
-            <Link to="/installation-guide" className="text-primary font-medium hover:text-rose-400 transition">Installation</Link>
-            <Link to="/contact" className="text-slate-300 hover:text-white transition">Contact</Link>
+            <Link to="/installation-guide" className={desktopLinkClass(isActivePath('/installation-guide'))}>Installation</Link>
+            <Link to="/contact" className={desktopLinkClass(isActivePath('/contact'))}>Contact</Link>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -57,18 +71,24 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-slate-800 border-b border-slate-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-white hover:bg-slate-700 rounded-md">Accueil</Link>
-            <Link to="/about-us" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">À Propos</Link>
+            <Link to="/#accueil" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActiveSection('#accueil'))}>Accueil</Link>
+            <Link to="/about-us" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActivePath('/about-us'))}>À Propos</Link>
             {isHome && (
               <>
-                <a href="#caracteristiques" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Caractéristiques</a>
-                <a href="#tarifs" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Tarifs</a>
-                <a href="#faq" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">FAQ</a>
-                <a href="#blog" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Blog</a>
+                <Link to="/#caracteristiques" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActiveSection('#caracteristiques'))}>Caractéristiques</Link>
+                <Link to="/#tarifs" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActiveSection('#tarifs'))}>Tarifs</Link>
+                <Link to="/#faq" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActiveSection('#faq'))}>FAQ</Link>
+                <Link to="/#blog" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActiveSection('#blog'))}>Blog</Link>
               </>
             )}
-            <Link to="/installation-guide" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-primary hover:bg-slate-700 rounded-md">Guide d'Installation</Link>
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">Contact</Link>
+            {!isHome && (
+              <>
+                <Link to="/#caracteristiques" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(false)}>Caractéristiques</Link>
+                <Link to="/#tarifs" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(false)}>Tarifs</Link>
+              </>
+            )}
+            <Link to="/installation-guide" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActivePath('/installation-guide'))}>Guide d'Installation</Link>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass(isActivePath('/contact'))}>Contact</Link>
           </div>
         </div>
       )}
