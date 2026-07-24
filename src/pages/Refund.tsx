@@ -53,7 +53,7 @@ export default function Refund() {
             Pour demander un remboursement, veuillez suivre cette procédure simple :
           </p>
           <ol>
-            <li>Contactez notre support via WhatsApp au <strong>+212373709744</strong>.</li>
+            <li>Contactez notre support via WhatsApp au <strong>+212673709744</strong>.</li>
             <li>Fournissez votre numéro de commande ou l'adresse e-mail / nom d'utilisateur associé à votre compte.</li>
             <li>Expliquez brièvement la raison de votre demande d'annulation.</li>
           </ol>

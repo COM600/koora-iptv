@@ -54,7 +54,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-rose-700 text-white px-6 py-2.5 rounded-full font-medium transition duration-300 shadow-lg shadow-primary/25">
+            <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-rose-700 text-white px-6 py-2.5 rounded-full font-medium transition duration-300 shadow-lg shadow-primary/25">
               Commander
             </a>
           </div>

@@ -193,7 +193,7 @@ export default function Installation() {
 
         <div className="mt-12 text-center">
           <p className="text-slate-400 mb-6">Vous avez besoin d'aide supplémentaire ? Notre équipe est là pour vous accompagner pas à pas.</p>
-          <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-rose-700 text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg shadow-primary/30">
+          <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary hover:bg-rose-700 text-white px-8 py-4 rounded-full font-bold text-lg transition duration-300 shadow-lg shadow-primary/30">
             Contacter le Support
           </a>
         </div>

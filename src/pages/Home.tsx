@@ -130,7 +130,7 @@ export default function Home() {
                 <li className="flex items-center gap-3"><Check className="text-green-500 h-5 w-5" /> <span>Support 24/7</span></li>
               </ul>
               
-              <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-slate-700 hover:bg-slate-600 transition">Commander</a>
+              <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-slate-700 hover:bg-slate-600 transition">Commander</a>
             </div>
 
             {/* 12 Months (Popular) */}
@@ -154,7 +154,7 @@ export default function Home() {
                 <li className="flex items-center gap-3"><Check className="text-primary h-5 w-5" /> <span>Support VIP Prioritaire</span></li>
               </ul>
               
-              <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-primary hover:bg-rose-700 text-white transition shadow-lg shadow-primary/30">Commander</a>
+              <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-primary hover:bg-rose-700 text-white transition shadow-lg shadow-primary/30">Commander</a>
             </div>
 
             {/* 6 Months */}
@@ -173,7 +173,7 @@ export default function Home() {
                 <li className="flex items-center gap-3"><Check className="text-green-500 h-5 w-5" /> <span>Support 24/7</span></li>
               </ul>
               
-              <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-slate-700 hover:bg-slate-600 transition">Commander</a>
+              <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="block text-center w-full py-4 rounded-xl font-bold bg-slate-700 hover:bg-slate-600 transition">Commander</a>
             </div>
           </div>
         </div>

@@ -70,7 +70,7 @@ export default function Privacy() {
 
           <h2>9. Contact</h2>
           <p>
-            Si vous avez des questions ou des préoccupations concernant cette Politique de Confidentialité, n'hésitez pas à nous contacter sur WhatsApp au +212373709744.
+            Si vous avez des questions ou des préoccupations concernant cette Politique de Confidentialité, n'hésitez pas à nous contacter sur WhatsApp au +212673709744.
           </p>
         </div>
       </div>

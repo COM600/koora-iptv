@@ -84,8 +84,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">WhatsApp (Recommandé)</h4>
-                    <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition">
-                      +212 37 37 09 744
+                    <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition">
+                      +212 67 37 09 744
                     </a>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-primary/20 to-rose-900/20 p-8 rounded-3xl border border-primary/30 text-center">
               <h3 className="text-xl font-bold mb-3">Besoin d'une activation rapide ?</h3>
               <p className="text-slate-400 mb-6">Contactez-nous directement sur WhatsApp pour une activation en moins de 5 minutes.</p>
-              <a href="https://wa.me/212373709744" target="_blank" rel="noopener noreferrer" className="inline-block w-full bg-primary hover:bg-rose-700 text-white py-3 rounded-xl font-bold transition shadow-lg shadow-primary/25">
+              <a href="https://wa.me/212673709744" target="_blank" rel="noopener noreferrer" className="inline-block w-full bg-primary hover:bg-rose-700 text-white py-3 rounded-xl font-bold transition shadow-lg shadow-primary/25">
                 Discuter sur WhatsApp
               </a>
             </div>

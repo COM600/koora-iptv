@@ -63,7 +63,7 @@ export default function Terms() {
 
           <h2>9. Contact</h2>
           <p>
-            Pour toute question concernant ces Conditions Générales, veuillez contacter notre équipe d'assistance via WhatsApp au +212373709744.
+            Pour toute question concernant ces Conditions Générales, veuillez contacter notre équipe d'assistance via WhatsApp au +212673709744.
           </p>
         </div>
       </div>
