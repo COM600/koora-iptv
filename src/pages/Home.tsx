@@ -179,7 +179,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Notre Blog</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">Découvrez nos derniers articles, astuces et actualités sur l'IPTV.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
             {/* Blog Post 1 */}
             <div className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-primary/50 transition duration-300">
               <div className="h-48 bg-slate-700 flex items-center justify-center">
