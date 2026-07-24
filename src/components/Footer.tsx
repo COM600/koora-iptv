@@ -1,7 +1,19 @@
 import { Tv } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  const activeHash = isHome ? location.hash || '#accueil' : '';
+
+  const footerLinkClass = (isActive: boolean) =>
+    isActive
+      ? 'text-primary hover:text-rose-400 transition'
+      : 'hover:text-white transition';
+
+  const isActivePath = (path: string) => location.pathname === path;
+  const isActiveSection = (hash: string) => isHome && activeHash === hash;
+
   return (
     <footer className="bg-slate-950 pt-16 pb-8 border-t border-slate-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,11 +31,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-4">Liens Rapides</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><Link to="/" className="hover:text-white transition">Accueil</Link></li>
-              <li><Link to="/about-us" className="hover:text-white transition">À Propos</Link></li>
-              <li><Link to="/installation-guide" className="hover:text-white transition text-primary">Guide d'Installation</Link></li>
-              <li><Link to="/#tarifs" className="hover:text-white transition">Tarifs</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
+              <li><Link to="/#accueil" className={footerLinkClass(isActiveSection('#accueil'))}>Accueil</Link></li>
+              <li><Link to="/about-us" className={footerLinkClass(isActivePath('/about-us'))}>À Propos</Link></li>
+              <li><Link to="/installation-guide" className={footerLinkClass(isActivePath('/installation-guide'))}>Guide d'Installation</Link></li>
+              <li><Link to="/#tarifs" className={footerLinkClass(isActiveSection('#tarifs'))}>Tarifs</Link></li>
+              <li><Link to="/contact" className={footerLinkClass(isActivePath('/contact'))}>Contact</Link></li>
             </ul>
           </div>
           
